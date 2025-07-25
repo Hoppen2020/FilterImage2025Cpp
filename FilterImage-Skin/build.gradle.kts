@@ -9,6 +9,7 @@ val ARTIFACT_ID = "FilterImage-Skin"
 val VERSION = latestGitTag().ifEmpty { "1.0.0-SNAPSHOT" }
 
 
+
 fun latestGitTag(): String {
     val process = ProcessBuilder("git", "describe", "--tags", "--abbrev=0").start()
     return  process.inputStream.bufferedReader().use {bufferedReader ->
